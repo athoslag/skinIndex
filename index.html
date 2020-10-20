@@ -3,29 +3,23 @@
 <html>
 	<head>
 		<title id="title">Skin Index</title>
+		<link rel="stylesheet" href="style.css">
 		<script type="text/javascript"> readFiles(); </script>
 	</head>
 	<body>
 		<center>
-			<h2 style="color: blue">
+			<h2>
 				<i>SKIN INDEX</i>
 			</h2>
-			<div class="column">
-				<div class="row">
+			<h3 style="color: gray">
+				<i>This skin library was compiled by \chineseman\ and indexed by athoslag.</i>
+			</h3>
+			<div class="container" id="skins">
 					<a class="skin" id="skin">
 			    		<img id="img1" src="src/1.jpg" alt="1" style="width:50%">
 			    		<p><button id="1" type="button" onclick="downloadSkin(this.id)">Download</button></p>
 			    	</a>
-			    	<a class="skin" id="skin2">
-			    		<img id="img2" src="src/2.jpg" alt="1" style="width:50%">
-			    		<p><button id="2" type="button" onclick="downloadSkin(this.id)">Download</button></p>
-			    	</a>
-			    	<a class="skin" id="skin3">
-			    		<img id="img3" src="src/3.jpg" alt="1" style="width:50%">
-			    		<p><button id="3" type="button" onclick="downloadSkin(this.id)">Download</button></p>
-			    	</a>
-			  	</div>
-			  </div>
+			</div>
 		</center>
 
 		<iframe id="download" style="display:none;"></iframe>
