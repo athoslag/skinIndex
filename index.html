@@ -1,10 +1,9 @@
-<style type="text/css">
-	#skin { position:relative; width: 25%; float:left;}
-</style>
+<script type="text/javascript" src="js/functions.js"></script>
 
 <html>
 	<head>
-		<title>Skin Index</title>
+		<title id="title">Skin Index</title>
+		<script type="text/javascript"> readFiles(); </script>
 	</head>
 	<body>
 		<center>
@@ -13,44 +12,22 @@
 			</h2>
 			<div class="column">
 				<div class="row">
-					<div id="skin">
-			    		<img src="src/1.png" alt="1" style="width:50%">
-			    		<p><button type="button">Download</button></p>
-			    	</div>
-					<div id="skin">
-			    		<img src="src/2.png" alt="1" style="width:50%">
-			    		<p><button type="button">Download</button></p>
-			    	</div>
-			    	<div id="skin">
-			    		<img src="src/3.png" alt="1" style="width:50%">
-			    		<p><button type="button">Download</button></p>
-			    	</div>
-			    	<div id="skin">
-			    		<img src="src/4.png" alt="1" style="width:50%">
-			    		<p><button type="button">Download</button></p>
-			    	</div>
-			    	<div id="skin">
-			    		<img src="src/5.png" alt="1" style="width:50%">
-			    		<p><button type="button">Download</button></p>
-			    	</div>
+					<a class="skin" id="skin">
+			    		<img id="img1" src="src/1.jpg" alt="1" style="width:50%">
+			    		<p><button id="1" type="button" onclick="downloadSkin(this.id)">Download</button></p>
+			    	</a>
+			    	<a class="skin" id="skin2">
+			    		<img id="img2" src="src/2.jpg" alt="1" style="width:50%">
+			    		<p><button id="2" type="button" onclick="downloadSkin(this.id)">Download</button></p>
+			    	</a>
+			    	<a class="skin" id="skin3">
+			    		<img id="img3" src="src/3.jpg" alt="1" style="width:50%">
+			    		<p><button id="3" type="button" onclick="downloadSkin(this.id)">Download</button></p>
+			    	</a>
 			  	</div>
 			  </div>
 		</center>
+
+		<iframe id="download" style="display:none;"></iframe>
 	</body>
 </html>
-
-<script type="text/javascript">
-	var dir = "src/";
-	var ext = ".png";
-	$.ajax({
-	    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-	    url: dir,
-	    success: function (data) {
-	        //List all .png file names in the page
-	        $(data).find("a:contains(" + ext + ")").each(function () {
-	            var filename = this.href.replace(window.location.host, "").replace("http://", "");
-	            $("body").append("<img src='" + dir + filename + "'>");
-	        });
-	    }
-	});
-</script>
