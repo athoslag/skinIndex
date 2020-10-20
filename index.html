@@ -1,0 +1,56 @@
+<style type="text/css">
+	#skin { position:relative; width: 25%; float:left;}
+</style>
+
+<html>
+	<head>
+		<title>Skin Index</title>
+	</head>
+	<body>
+		<center>
+			<h2 style="color: blue">
+				<i>SKIN INDEX</i>
+			</h2>
+			<div class="column">
+				<div class="row">
+					<div id="skin">
+			    		<img src="src/1.png" alt="1" style="width:50%">
+			    		<p><button type="button">Download</button></p>
+			    	</div>
+					<div id="skin">
+			    		<img src="src/2.png" alt="1" style="width:50%">
+			    		<p><button type="button">Download</button></p>
+			    	</div>
+			    	<div id="skin">
+			    		<img src="src/3.png" alt="1" style="width:50%">
+			    		<p><button type="button">Download</button></p>
+			    	</div>
+			    	<div id="skin">
+			    		<img src="src/4.png" alt="1" style="width:50%">
+			    		<p><button type="button">Download</button></p>
+			    	</div>
+			    	<div id="skin">
+			    		<img src="src/5.png" alt="1" style="width:50%">
+			    		<p><button type="button">Download</button></p>
+			    	</div>
+			  	</div>
+			  </div>
+		</center>
+	</body>
+</html>
+
+<script type="text/javascript">
+	var dir = "src/";
+	var ext = ".png";
+	$.ajax({
+	    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+	    url: dir,
+	    success: function (data) {
+	        //List all .png file names in the page
+	        $(data).find("a:contains(" + ext + ")").each(function () {
+	            var filename = this.href.replace(window.location.host, "").replace("http://", "");
+	            $("body").append("<img src='" + dir + filename + "'>");
+	        });
+	    }
+	});
+</script>
