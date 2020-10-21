@@ -1,9 +1,9 @@
-<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript" src="src/functions.js"></script>
 
 <html>
 	<head>
 		<title id="title">Skin Index</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="src/style.css">
 		<script type="text/javascript"> readFiles(); </script>
 	</head>
 	<body>
@@ -15,11 +15,9 @@
 				<i>This skin library was compiled by \chineseman\ and indexed by athoslag.</i>
 			</h3>
 			<div class="container" id="skins">
-					<a class="skin" id="skin">
-			    		<img id="img1" src="src/1.jpg" alt="1" style="width:50%">
-			    		<p><button id="1" type="button" onclick="downloadSkin(this.id)">Download</button></p>
-			    	</a>
+				<!-- skins goes here -->
 			</div>
+			<button onclick="loadMoreEntries(30)">Carregar mais skins</button>
 		</center>
 
 		<iframe id="download" style="display:none;"></iframe>
