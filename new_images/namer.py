@@ -19,7 +19,7 @@ skins = [f for f in os.listdir() if f.endswith('.skin') or f.endswith('.hskin')]
 skins.sort()
 
 print('found ' + str(len(images)) + ' skins.')
-index = 0
+index = 1
 
 for image in images:
     newname = str(index) + extension
