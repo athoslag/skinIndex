@@ -2,8 +2,8 @@ from PIL import Image
 import os
 
 # --- Configuration ---
-INPUT_FOLDER = "new_images"  # Folder containing your original BMP images
-OUTPUT_FOLDER = "cropped_images" # Folder where cropped JPG images will be saved
+INPUT_FOLDER = "raw_images"  # Folder containing your original BMP images
+OUTPUT_FOLDER = "image" # Folder where cropped JPG images will be saved
 # Define the crop rectangle: (left, upper, right, lower)
 # These are pixel coordinates.
 CROP_RECTANGLE = (755, 345, 940, 625)  # (left, upper, right, lower) Example
