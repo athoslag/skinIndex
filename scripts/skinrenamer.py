@@ -18,7 +18,7 @@ def sort_and_rename_files_combined(folder_path, dry_run=True):
     print("-" * 30)
 
     all_target_files = []
-    allowed_extensions = {".skin", ".hskin"}
+    allowed_extensions = {".jpg", ".skin", ".hskin"}
 
     # 1. Collect all .skin and .hskin files into a single list
     for filename in os.listdir(folder_path):
@@ -148,8 +148,8 @@ if __name__ == "__main__":
     # Set DRY_RUN to False to actually rename files.
     # It's highly recommended to run with DRY_RUN = True first!
     # --- ----------- ---
-    is_dry_run = True
-    # is_dry_run = False # UNCOMMENT THIS LINE TO PERFORM ACTUAL RENAMING
+    #is_dry_run = True
+    is_dry_run = False # UNCOMMENT THIS LINE TO PERFORM ACTUAL RENAMING
 
     confirm_action = ""
     if not is_dry_run:
