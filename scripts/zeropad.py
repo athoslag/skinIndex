@@ -1,7 +1,6 @@
 import os
 
 # --- Configuration ---
-TARGET_FOLDER = "cropped_images"
 MIN_FILENAME_LENGTH = 4 # The desired minimum length for the numeric part (e.g., 4 for 0001)
 # --- End Configuration ---
 
@@ -25,7 +24,7 @@ def pad_numeric_filenames_direct(folder_path, min_length):
     error_count = 0
     already_padded_count = 0
 
-    allowed_extensions = {".jpg"}
+    allowed_extensions = {".jpg", ".skin", ".hskin"}
 
     # Iterate directly, but be mindful if new names could match old names in subsequent iterations
     # For this specific operation (padding), it's generally safe as "1.skin" -> "0001.skin"
@@ -86,7 +85,5 @@ def pad_numeric_filenames_direct(folder_path, min_length):
         print(f"Errors encountered: {error_count} files.")
 
 if __name__ == "__main__":
-    if TARGET_FOLDER == "your_folder_path_here":
-        print("Error: Please set the TARGET_FOLDER variable in the script before running.")
-    else:
-        pad_numeric_filenames_direct(TARGET_FOLDER, MIN_FILENAME_LENGTH)
+    target_folder = input("Enter the path to the folder: ")
+    pad_numeric_filenames_direct(target_folder, MIN_FILENAME_LENGTH)
