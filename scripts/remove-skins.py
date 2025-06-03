@@ -1,7 +1,7 @@
 import os
 import sys
 
-skinsToRemove = [1149, 1143, 1487, 1628, 1641, 1709, 1790, 1807, 2322, 2325, 2341, 2342, 2347, 2366, 2374, 2551, 2895, 2896]
+skinsToRemove = ["0989"]
 
 for skin in skinsToRemove:
     skinPath = "skin/" + str(skin) + ".skin"

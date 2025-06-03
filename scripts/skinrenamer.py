@@ -3,7 +3,7 @@ import shutil # Not strictly needed for rename, but good for other file ops
 
 def sort_and_rename_files_combined(folder_path, dry_run=True):
     """
-    Sorts all .skin and .hskin files in the given folder together and renames
+    Sorts all .jpg or .skin and .hskin files in the given folder together and renames
     them sequentially (e.g., 1.skin, 2.hskin, 3.skin, ...), preserving original extensions.
     """
     if not os.path.isdir(folder_path):
@@ -34,7 +34,7 @@ def sort_and_rename_files_combined(folder_path, dry_run=True):
 
     # 2. Sort the combined list of files alphabetically
     all_target_files.sort()
-    print(f"Found {len(all_target_files)} total .skin/.hskin files to process.")
+    print(f"Found {len(all_target_files)} total .jpg/.skin/.hskin files to process.")
     # for f in all_target_files: print(f"  - {f}") # Optional: print sorted list
 
     rename_operations = [] # List to store (old_path, temp_path, final_path)
